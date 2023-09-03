@@ -4,6 +4,7 @@ class App{
     protected $controller = 'home';
     protected $method = 'index';
     protected $params = [];
+    // protected $url[0] = 'index';
     public function __construct()
     {
         //controllers
@@ -39,6 +40,8 @@ class App{
             $url = filter_var($url, FILTER_SANITIZE_URL);
             $url = explode('/', $url);
             return $url;
+        }else{
+            return $url = ['home'];
         }
     }
 }

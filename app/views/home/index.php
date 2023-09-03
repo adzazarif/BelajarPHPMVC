@@ -1,4 +1,4 @@
-<h1><?= $data['url'] ?></h1>
+
 <?php
     foreach($data['all'] as $d){
 ?>

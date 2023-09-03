@@ -18,12 +18,18 @@ class UserModel{
         ]
          ];
 
-    public function getName(){
-        return $this->name;
-    }
+    // public function getName(){
+    //     return $this->name;
+    // }
 
     public function getAll(){
         $this->db->query("SELECT * FROM ".$this->table);
         return $this->db->resultSet();
+    }
+    
+    public function getByUsername($user){
+        $this->db->query("SELECT * FROM ".$this->table." WHERE username=:username");
+        $this->db->bind('username',$user);
+        return $this->db->single();
     }
 }
