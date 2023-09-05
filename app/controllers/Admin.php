@@ -48,4 +48,21 @@ class Admin extends Controller{
             echo "gagal";
         }
     }
+
+    public function clientType()
+    {
+        $data['dataAll'] = $this->model('ClientTypeModel')->getAll();
+        $data['dataMarkup'] = $this->model('ClientMarkupModel')->getAll();
+        $this->view('templates/header', $data);
+        $this->view('admin/clientType',$data);
+        $this->view('templates/footer');
+    }
+
+    public function addClientType(){
+        if($this->model('ClientTypeModel')->save($_POST) > 0){
+            header("Location:".BASEURL."/admin/clientType");
+        }else{
+            echo "gagal";
+        }
+    }
 }
