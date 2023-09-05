@@ -103,7 +103,7 @@
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="layouts-fluid.html" class="menu-link">
+                  <a href="<?= BASEURL ?>/admin/clientStatus" class="menu-link">
                     <div data-i18n="Fluid">Client Status</div>
                   </a>
                 </li>

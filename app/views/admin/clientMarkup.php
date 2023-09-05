@@ -27,7 +27,7 @@
             <td><?= $d['amount'] == 1 ? 'True' : 'False'; ?></td>
             <td><?= $d['value'] ?></td>
             <td>
-            <?php $no++; endforeach ?>
+            
             <div class="dropdown">
               <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
                 <i class="bx bx-dots-vertical-rounded"></i>
@@ -39,6 +39,7 @@
             </div>
             </td>
           </tr>
+          <?php $no++; endforeach ?>
       </tbody>
     </table>
   </div>
@@ -92,20 +93,10 @@
         <div class="row">
           <div class="col mb-3">
             <label for="nameBasic" class="form-label">Value</label>
-            <input type="text" name="value" id="nameBasic" class="form-control" placeholder="Enter Name" />
+            <input type="number" name="value" id="nameBasic" class="form-control" placeholder="Enter Name" />
           </div>
         </div>
 
-        <!-- <div class="row g-2">
-                                  <div class="col mb-0">
-                                    <label for="emailBasic" class="form-label">Percentage</label>
-                                    <input type="text" id="emailBasic" class="form-control" placeholder="xxxx@xxx.xx" />
-                                  </div>
-                                  <div class="col mb-0">
-                                    <label for="dobBasic" class="form-label">DOB</label>
-                                    <input type="text" id="dobBasic" class="form-control" placeholder="DD / MM / YY" />
-                                  </div>
-                                </div> -->
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">

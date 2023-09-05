@@ -32,4 +32,20 @@ class Admin extends Controller{
             echo "gagal";
         }
     }
+
+    public function clientStatus()
+    {
+        $data['dataAll'] = $this->model('ClientStatusModel')->getAll();
+        $this->view('templates/header', $data);
+        $this->view('admin/clientStatus',$data);
+        $this->view('templates/footer');
+    }
+
+    public function addClientStatus(){
+        if($this->model('ClientStatusModel')->save($_POST) > 0){
+            header("Location:".BASEURL."/admin/clientStatus");
+        }else{
+            echo "gagal";
+        }
+    }
 }
