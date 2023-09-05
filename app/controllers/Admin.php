@@ -12,6 +12,8 @@ class Admin extends Controller{
     {
         
         $data['dataAll'] = $this->model('ClientModel')->getAll();
+        $data['dataType'] = $this->model('ClientTypeModel')->getAll();
+        $data['dataStatus'] = $this->model('ClientStatusModel')->getAll();
         $this->view('templates/header', $data);
         $this->view('admin/client',$data);
         $this->view('templates/footer');

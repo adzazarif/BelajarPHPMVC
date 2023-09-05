@@ -7,7 +7,7 @@ class ClientModel{
     }
 
     public function getAll(){
-        $this->db->query("SELECT * FROM ".$this->table);
+        $this->db->query("SELECT * FROM ".$this->table." JOIN client_type ON client.clientTypeId = client_type.clientTypeId JOIN client_status ON client.clientStatusId = client_status.clientStatusId");
         return $this->db->resultSet();
     }
 
