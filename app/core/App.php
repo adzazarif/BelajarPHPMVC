@@ -1,7 +1,7 @@
 <?php
 
 class App{
-    protected $controller = 'home';
+    protected $controller = 'admin';
     protected $method = 'index';
     protected $params = [];
     // protected $url[0] = 'index';
@@ -41,7 +41,7 @@ class App{
             $url = explode('/', $url);
             return $url;
         }else{
-            return $url = ['home'];
+            return $url = ['admin'];
         }
     }
 }
