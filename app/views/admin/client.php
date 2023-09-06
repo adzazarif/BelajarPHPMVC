@@ -61,16 +61,16 @@
 
                         <div class="mb-3">
                           <label for="defaultSelect" class="form-label">Client Type</label>
-                          <select id="defaultSelect" name="markupId" class="form-select">
+                          <select id="defaultSelect" name="typeId" class="form-select">
                             <?php foreach ($data['dataType'] as $d) : ?>
-                              <option value="<?= $d['clientMarkupId'] ?>"><?= $d['clientMarkupName'] ?></option>
+                              <option value="<?= $d['clientTypeId'] ?>"><?= $d['clientTypeName'] ?></option>
                             <?php endforeach ?>
                           </select>
                         </div>
 
                         <div class="mb-3">
                           <label for="defaultSelect" class="form-label">Client Status</label>
-                          <select id="defaultSelect" name="markupId" class="form-select">
+                          <select id="defaultSelect" name="statusId" class="form-select">
                             <?php foreach ($data['dataStatus'] as $d) : ?>
                               <option value="<?= $d['clientStatusId'] ?>"><?= $d['clientStatusName'] ?></option>
                             <?php endforeach ?>

@@ -11,4 +11,15 @@ class ClientModel{
         return $this->db->resultSet();
     }
 
+    public function save($data){
+        $query = "INSERT INTO $this->table VALUES('', :clientName, :clientTypeId, :clientStatusId)";
+
+        $this->db->query($query);
+        $this->db->bind('clientName', $data['name']);
+        $this->db->bind('clientTypeId', $data['typeId']);
+        $this->db->bind('clientStatusId', $data['statusId']);
+        $this->db->execute();
+        return $this->db->rowCount();
+    }
+
 }

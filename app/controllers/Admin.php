@@ -18,6 +18,14 @@ class Admin extends Controller{
         $this->view('admin/client',$data);
         $this->view('templates/footer');
     }
+
+    public function addClient(){
+        if($this->model('ClientModel')->save($_POST) > 0){
+            header("Location:".BASEURL."/admin/client");
+        }else{
+            echo "gagal";
+        }
+    }
     
     public function clientMarkup()
     {
