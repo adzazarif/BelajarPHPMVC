@@ -10,13 +10,13 @@ class Admin extends Controller{
     }
     public function client()
     {
-        
         $data['dataAll'] = $this->model('ClientModel')->getAll();
         $data['dataType'] = $this->model('ClientTypeModel')->getAll();
         $data['dataStatus'] = $this->model('ClientStatusModel')->getAll();
         $this->view('templates/header', $data);
         $this->view('admin/client',$data);
         $this->view('templates/footer');
+      
     }
 
     public function addClient(){
@@ -26,6 +26,7 @@ class Admin extends Controller{
             echo "gagal";
         }
     }
+
     
     public function clientMarkup()
     {
@@ -74,5 +75,29 @@ class Admin extends Controller{
         }else{
             echo "gagal";
         }
+    }
+
+    public function searchClient()
+    {
+        $data['dataAll'] = $this->model('ClientModel')->getByName($_POST);
+        $data['dataType'] = $this->model('ClientTypeModel')->getAll();
+        $data['dataStatus'] = $this->model('ClientStatusModel')->getAll();
+        $this->view('templates/header', $data);
+        $this->view('admin/client',$data);
+        $this->view('templates/footer');
+      
+    }
+
+    public function detailClient($id)
+    {
+        $data['id'] = $id;
+        $data['dataAddress'] = $this->model('ClientAddressModel')->getById($id);
+        $data['dataContact'] = $this->model('ContactModel')->getByClientId($id);
+        $data['detail'] = $this->model('ClientModel')->getById($id);
+        $data['dataAll'] = $this->model('ClientTypeModel')->getAll();
+        $data['dataMarkup'] = $this->model('ClientMarkupModel')->getAll();
+        $this->view('templates/header', $data);
+        $this->view('admin/detailClient',$data);
+        $this->view('templates/footer');
     }
 }
