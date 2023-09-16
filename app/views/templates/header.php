@@ -21,7 +21,7 @@
 
     <!-- Favicon -->
     <!-- <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" /> -->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -82,7 +82,7 @@
             <!-- Layouts -->
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-layout"></i>
+                <i class='menu-icon tf-icons bx bxs-user'></i>
                 <div data-i18n="Layouts">Client</div>
               </a>
 
@@ -105,6 +105,36 @@
                 <li class="menu-item">
                   <a href="<?= BASEURL ?>/admin/clientStatus" class="menu-link">
                     <div data-i18n="Fluid">Client Status</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-layout"></i>
+                <div data-i18n="Layouts">Suplier</div>
+              </a>
+
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="<?= BASEURL ?>/admin/suplier" class="menu-link">
+                    <div data-i18n="Without menu">Suplier</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="<?= BASEURL ?>/admin/suplierType" class="menu-link">
+                    <div data-i18n="Without navbar">Suplier Type</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="<?= BASEURL ?>/admin/suplierMarkup" class="menu-link">
+                    <div data-i18n="Container">Suplier Markup</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="<?= BASEURL ?>/admin/suplierStatus" class="menu-link">
+                    <div data-i18n="Fluid">Suplier Status</div>
                   </a>
                 </li>
               </ul>

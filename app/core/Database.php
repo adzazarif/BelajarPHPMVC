@@ -5,7 +5,6 @@ class Database{
     private $user = DB_USER;
     private $pass = DB_PASSWORD;
     private $db_name = DB_NAME;
-
     private $dbh;
     private $stmt;
 
